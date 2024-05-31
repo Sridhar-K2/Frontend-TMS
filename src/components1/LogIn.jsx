@@ -28,7 +28,9 @@ const LogIn = () => {
             const response = await axios.post(
                 '/api/login',
                 { email, password },
-                { headers: { 'Content-Type': 'application/json' }, withCredentials: true }
+                { headers: { 'Content-Type': 'application/json' }, 
+                // withCredentials: true 
+            }
             );
 
             // Assuming login is successful if no error is thrown
