@@ -61,7 +61,7 @@ const SignUp = () => {
                 },
                 {
                     headers: { 'Content-Type': 'application/json' },
-                    withCredentials: true
+                    // withCredentials: true
                 }
             );
 
