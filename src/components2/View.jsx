@@ -14,7 +14,7 @@ const View = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://localhost:5000/api/tasks',{params:{email:window.localStorage.getItem("email")}});
+                const response = await axios.get('http://localhost:5050/api/tasks',{params:{email:window.localStorage.getItem("email")}});
                 console.log('API Response:', response);
 
                 if (!response.data || typeof response.data.userName !== 'string' || !Array.isArray(response.data.tasks)) {
