@@ -26,7 +26,7 @@ const Task = ({_id, title, description, deadline, isDone}) => {
         e.preventDefault();
 
         try{
-            const response = await axios.patch('api/tasks/edit',
+            const response = await axios.patch('https://backend-tms.onrender.com/api/tasks/edit',
                 JSON.stringify({
                     _id,
                     title: editTitle,

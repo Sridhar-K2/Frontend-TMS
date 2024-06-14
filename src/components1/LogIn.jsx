@@ -26,7 +26,7 @@ const LogIn = () => {
 
         try {
             const response = await axios.post(
-                '/api/login',
+                'https://backend-tms.onrender.com/api/login',
                 { email, password },
                 { headers: { 'Content-Type': 'application/json' },
                 //  withCredentials: true

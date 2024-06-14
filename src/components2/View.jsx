@@ -14,7 +14,7 @@ const View = () => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const response = await axios.get('http://localhost:5050/api/tasks',{params:{email:window.localStorage.getItem("email")}});
+                const response = await axios.get('https://backend-tms.onrender.com/api/tasks',{params:{email:window.localStorage.getItem("email")}});
                 console.log('API Response:', response);
 
                 if (!response.data || typeof response.data.userName !== 'string' || !Array.isArray(response.data.tasks)) {
@@ -45,7 +45,7 @@ const View = () => {
 
     const handleLogout = async () => {
         try {
-            await axios.get('/api/logout');
+            await axios.get('https://backend-tms.onrender.com/api/logout');
             window.location.reload(true); // Reload page after logout
         } catch (error) {
             console.error('Error logging out:', error.message);

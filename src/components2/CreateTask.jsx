@@ -23,7 +23,7 @@ const CreateTask = ({progress}) => {
         e.preventDefault();
 
         try {
-            const response = await axios.patch('/api/tasks',
+            const response = await axios.patch('https://backend-tms.onrender.com/api/tasks',
                 JSON.stringify({
                     title: title,
                     description: description,

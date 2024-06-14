@@ -24,7 +24,7 @@ const Home = () => {
     }, []); // Set axios configuration on component mount
 
     const handleLogout = () => {
-        axios.get('/api/logout')
+        axios.get('https://backend-tms.onrender.com/api/logout')
             .then(res => window.location.reload(true))
             .catch(err => console.error(err));
     };

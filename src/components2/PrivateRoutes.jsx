@@ -10,7 +10,7 @@ const PrivateRoute = () => {
     //upon successful login, the task page is loaded else the user is navigated to the login page.
     axios.defaults.withCredentials = true
     useEffect(() => {
-        axios.get('/api/tasks')
+        axios.get('https://backend-tms.onrender.com/api/tasks')
         .then( res => {
             if (res.data !== 'not-token') {
                 setAuth(<Outlet/>)
