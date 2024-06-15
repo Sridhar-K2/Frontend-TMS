@@ -61,7 +61,7 @@ const Task = ({_id, title, description, deadline, isDone}) => {
     const handleUpdateStatus = async () => {
         
         try{
-            const response = await axios.patch('http://localhost:5050/api/tasks/status',
+            const response = await axios.patch('https://backend-tms.onrender.com/api/tasks/status',
                 JSON.stringify({
                     _id,
                     isDone: !isDone,
@@ -92,7 +92,7 @@ const Task = ({_id, title, description, deadline, isDone}) => {
     //this function handles deleting of tasks, it sends it to the backend and updates the redux store.
     const handleDeleteTask = async () => {
         try {
-            const response = await axios.patch('http://localhost:5050/api/tasks/delete', 
+            const response = await axios.patch('https://backend-tms.onrender.com/api/tasks/delete', 
                 JSON.stringify({
                     title,
                     description,

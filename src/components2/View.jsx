@@ -59,7 +59,7 @@ const View = () => {
             // Simulated new task creation request
             const newTask = { name: 'New Task', completed: false };
             // Send POST request to create task
-            const response = await axios.post('/api/tasks', newTask);
+            const response = await axios.post('https://backend-tms.onrender.com/api/tasks', newTask);
 
             // Assuming the API responds with updated task list
             const updatedTasks = response.data.tasks;
