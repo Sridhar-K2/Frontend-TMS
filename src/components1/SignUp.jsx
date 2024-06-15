@@ -52,8 +52,7 @@ const SignUp = () => {
         e.preventDefault();
         setLoading(true); // Start loading indicator on form submission
         try {
-            const response = await axios.post(
-                'https://backend-tms.onrender.com/api/signup',
+            const response = await axios.post('https://backend-tms.onrender.com/api/signup',
                 {
                     userName: user,
                     email: userEmail,
